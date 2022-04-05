@@ -36,26 +36,33 @@ public class Vector<E extends Comparable<E>> implements PriorityQueue<E>{
         
     }
 
-    
+
 
     protected Vector<E> data;
 
-    public VectorHeap(){
+    // VectorHeap
+    public Vector(){
         data= new Vector<E>();
     }
 
 
-    public VectorHeap(Vector<E> v)
+    // VectorHeap
+    public Vector(Vector<E> v)
     // post: constructs a new priority queue from an unordered vector
     {
         int i;
-        data = new Vector<E>(v.size()); // we know ultimate size
+        // data = new Vector<E>(v.size());
+        data = new Vector<E>(); // we know ultimate size
         for (i = 0; i < v.size(); i++)
         { // add elements to heap
             add(v.get(i));
         }
     }
 
+    // No existe
+    private E get(int i) {
+        return null;
+    }
 
     protected static int parent(int i)
     // pre: 0 <= i < size

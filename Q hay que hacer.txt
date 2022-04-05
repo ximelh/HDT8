@@ -1,0 +1,10 @@
+Llenar ficha de ingreso
+Leer archivo
+Orden de pacientes (Comparable Paciente)
+Cola de pacientes (VectorHeap)
+Llamar siguiente paciente
+Vaciar cola
+Pruebas unitarias (VectorHeap insertan y retiran)
+
+
+Segunda versión
