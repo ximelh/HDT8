@@ -1,4 +1,6 @@
-public class Vector<E extends Comparable<E>> implements PriorityQueue<E>{
+import java.util.Vector;
+
+public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>{
 
     @Override
     public E getFirst() {
@@ -41,13 +43,13 @@ public class Vector<E extends Comparable<E>> implements PriorityQueue<E>{
     protected Vector<E> data;
 
     // VectorHeap
-    public Vector(){
+    public VectorHeap(){
         data= new Vector<E>();
     }
 
 
     // VectorHeap
-    public Vector(Vector<E> v)
+    public VectorHeap(Vector<E> v)
     // post: constructs a new priority queue from an unordered vector
     {
         int i;
@@ -59,10 +61,6 @@ public class Vector<E extends Comparable<E>> implements PriorityQueue<E>{
         }
     }
 
-    // No existe
-    private E get(int i) {
-        return null;
-    }
 
     protected static int parent(int i)
     // pre: 0 <= i < size
