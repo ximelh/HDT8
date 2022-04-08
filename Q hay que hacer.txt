@@ -1,4 +1,4 @@
-Llenar ficha de ingreso
+Llenar ficha de ingreso YA
 Leer archivo
 Orden de pacientes (Comparable Paciente)
 Cola de pacientes (VectorHeap)
