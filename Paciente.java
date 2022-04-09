@@ -1,60 +1,41 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-
-
-public class Paciente implements Comparable<Paciente> {
+public class Paciente implements Comparable<Paciente>{
 
     private String nombre;
-    private String sintoma;
-    private String prioridad;    
-
-
-    public static  ArrayList<String[]> leer(String archivo) throws IOException {
-        String cadena;
-
-        FileReader f = new FileReader("Pacientes.txt"); //abre el archivo
-        BufferedReader b = new BufferedReader(f); // lee el archivo
-        ArrayList<String[]> Pacientes = new ArrayList<String[]>();
+    private String padecimiento;
+    private String prioridad;
     
-        while((cadena = b.readLine())!=null) { // Para separar en comas
-            String[] parts = cadena.split(",");
-            Pacientes.add(parts);
-        }
-        b.close();
-        return Pacientes;
+
+    public Paciente(String nom, String pad, String cod){
+        this.setNombre(nom);
+        this.setPadecimiento(pad);
+        this.setPrioridad(prioridad);
     }
 
-    /**
-     * Getter de nombre
-     * @return
-     */
+    public int compareTo(Paciente otro){
+        return this.prioridad.compareTo(otro.getPrioridad());
+    }
+
+    public String toString(){
+        return this.nombre + ", "+this.padecimiento +", "+this.prioridad;
+    }
+
     public String getNombre() {
         return nombre;
     }
-
-    /**
-     * Getter de prioridad
-     * @return
-     */
     public String getPrioridad() {
         return prioridad;
     }
-
-    /**
-     * Getter de sintomas
-     * @return
-     */
-    public String getSintoma() {
-        return sintoma;
+    public void setPrioridad(String prioridad) {
+        this.prioridad = prioridad;
     }
-
-    @Override
-    public int compareTo(Paciente that) {
-        // TODO Auto-generated method stub
-        return 0;
+    public String getPadecimiento() {
+        return padecimiento;
+    }
+    public void setPadecimiento(String padecimiento) {
+        this.padecimiento = padecimiento;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
 }

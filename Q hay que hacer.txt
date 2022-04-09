@@ -1,5 +1,5 @@
 Llenar ficha de ingreso YA
-Leer archivo
+Leer archivo YA
 Orden de pacientes (Comparable Paciente)
 Cola de pacientes (VectorHeap)
 Llamar siguiente paciente

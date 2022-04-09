@@ -45,7 +45,10 @@ public class Main {
 
         
     }
-
+/**
+ * Método que permite ingresar la ficha de otro paciente
+ * @throws IOException
+ */
     public static void Ingreso() throws IOException{
         String s = System.lineSeparator();
         String nombre;
@@ -55,19 +58,19 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
 
-        System.out.println("Ingrese el nombre del paciente");
+        System.out.println("Ingrese el nombre del paciente"); // Recibe el nombre del paciente
         nombre = scan.nextLine();
         
-        System.out.println("Ingrese el padecimiento del paciente");
+        System.out.println("Ingrese el padecimiento del paciente"); //Recibe el padecimiento
         padecimiento = scan.nextLine();
 
-        System.out.println("Ingrese la prioridad para atender al paciente, una letra de la A a la E.");
+        System.out.println("Ingrese la prioridad para atender al paciente, una letra de la A a la E."); //Recibe la prioridad
         prioridad = scan.nextLine();
 
 
 
         Writer output;
-        output = new BufferedWriter(new FileWriter("Pacientes.txt", true)); 
+        output = new BufferedWriter(new FileWriter("Pacientes.txt", true)); //Ingresa la ficha del paciente al archivo txt
         output.append(s + nombre+", "+padecimiento+", "+prioridad);
         output.close();
     }
